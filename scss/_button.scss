@@ -250,3 +250,14 @@ a.button {
   cursor: default !important;
   pointer-events: none;
 }
+
+ion-option-button.button:after{
+  content: "";
+  position: absolute;
+  top:0;
+  left:100%; 
+  width: 1000%;
+  height: 100%;
+  z-index: inherit;
+  background-color: inherit;
+}
