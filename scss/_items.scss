@@ -800,16 +800,30 @@ button.item.item-button-right {
   right: 0;
   z-index: $z-index-item-options;
   height: 100%;
+  -webkit-transform: translate3d(100%, 0, 0)  ;
+  transform: translate3d(100%, 0, 0)  ;
 
   .button {
     height: 100%;
     border: none;
     border-radius: 0;
     @include display-inline-flex();
-    @include align-items(center);
-
+    @include align-items(center); 
+    position: relative;
+    @include transition-duration ($item-edit-transition-duration );
     &:before{
       margin: 0 auto;
     }
+    &:after{
+      content: "";
+      position: absolute;
+      top:0;
+      left:100%; 
+      width: 1000%;
+      height: 100%;
+      z-index: inherit;
+      background-color: inherit;
+    }
   }
 }
+ 

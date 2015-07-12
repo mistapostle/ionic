@@ -67,7 +67,7 @@
       buttons: buttons,
       buttonsWidth: buttonsWidth,
       //jammy
-      optButtons:buttons.querySelectorAll("ion-option-button"), //TODO , use Constants
+      optButtons:buttons.querySelectorAll(".button"), //TODO , use Constants
       //end
       content: content,
       startOffsetX: offsetX
@@ -122,8 +122,8 @@
         (Math.abs(this._currentDrag.startOffsetX) > 0))) {
       this._isDragging = true;
      //jammy
-      this._currentDrag.buttons.style[ionic.CSS.TRANSFORM] = " translate3d(100%,0,0)";
-      this._currentDrag.buttons.style['position'] = " absolute";
+     // this._currentDrag.buttons.style[ionic.CSS.TRANSFORM] = " translate3d(100%,0,0)";
+     // this._currentDrag.buttons.style['position'] = " absolute";
       //this._currentDrag.buttons.style['display'] = "flex";
       //end
     }
@@ -154,7 +154,7 @@
       for(var i = 0 ; i <       this._currentDrag.optButtons.length ; i++){
         var btn = this._currentDrag.optButtons[i];
         btn.style['z-index'] = i+1 ;
-        btn.style["position"] = 'relative';
+     //   btn.style["position"] = 'relative';
         btn.style[ionic.CSS.TRANSFORM] = 'translate3d(' +  (newX - btn.offsetLeft * (1 + Math.max( -1, progress) )) + 'px, 0, 0)';
          btn.style[ionic.CSS.TRANSITION] = 'none';
       }  
@@ -199,7 +199,7 @@
         var btn = self._currentDrag.optButtons[i]; 
         btn.style[ionic.CSS.TRANSFORM] = '';
         btn.style[ionic.CSS.TRANSITION] = '';
-        btn.style['transition-duration'] = '250ms';
+       // btn.style['transition-duration'] = '250ms';
 
       }  
         /*
@@ -214,7 +214,7 @@
         var btn = self._currentDrag.optButtons[i]; 
         btn.style[ionic.CSS.TRANSFORM] = 'translate3d(' + restingPoint + 'px,0,0)';
         btn.style[ionic.CSS.TRANSITION] = '';
-        btn.style['transition-duration'] = '250ms';
+      //  btn.style['transition-duration'] = '250ms';
 
       }  
         //end
